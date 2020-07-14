@@ -1,0 +1,67 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 100px;
+  height: 95px;
+  background-color: #fff;
+  cursor: pointer;
+  width: 100%;
+
+  .header-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #0290ff;
+  }
+}
+
+.books-container {
+  margin: 80px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+  align-items: center;
+}
+
+
+
+/******** Mobile View *************/
+
+@media only screen and (max-width: 500px) {
+  .header {
+    padding: 0 3%;
+  }
+
+  .header-title {
+    display: none;
+  }
+
+  .books-container {
+    grid-template-columns: repeat(1, 1fr);
+    margin: 30px;
+  }
+}
+
+/******** Tablet View *************/
+
+@media only screen and (max-width: 768px) {
+  .header {
+    padding: 0 3%;
+  }
+
+  .books-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .header {
+    padding: 0 3%;
+  }
+}

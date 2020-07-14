@@ -1,11 +1,18 @@
 import React from 'react';
-import './App.css';
+import { BrowserRouter, Route } from 'react-router-dom';
+import '../styles/scss/App.scss';
+
+import DogsList from '../containers/DogsList';
+import ShowDog from './ShowDog';
 
 function App() {
   return (
-    <div className="App">
-      <h1>Welcome to Dog Clothes</h1>
-    </div>
+    <BrowserRouter>
+      <div className="panel-bg">
+        <Route exact path="/" component={DogsList} />
+        <Route path="/dog/:id" component={ShowDog} />
+      </div>
+    </BrowserRouter>
   );
 }
 
