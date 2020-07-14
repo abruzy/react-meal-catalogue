@@ -4,7 +4,7 @@ const dogs = (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case 'FETCH_DATA':
       console.log(action.payload);
-      return { ...state, dog_clothes: action.payload.data.meals };
+      return { ...state, dog_clothes: action.payload };
     case 'FETCH_DOG':
       return { ...state, dog_clothes: action.payload.data.meals };
     case 'FETCH_BY_CATEGORY':

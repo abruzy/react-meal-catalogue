@@ -1,11 +1,19 @@
 import axios from 'axios';
 
 const FETCHDOGS = () => async dispatch => {
-  console.log('hi');
-  const data = await axios.get('https://www.themealdb.com/api/json/v1/1/search.php?s=Arrabiata');
+  const allCategories = ['Beef', 'Chicken', 'Dessert'];
+  const allCategoriesResult = [];
+
+  allCategories.map(async category => {
+    const data = await axios.get(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${category}`);
+    console.log(data);
+    allCategoriesResult.push(...data.data.meals);
+  });
+
+  console.log(allCategoriesResult);
   dispatch({
     type: 'FETCH_DATA',
-    payload: data,
+    payload: allCategoriesResult,
   });
 };
 
