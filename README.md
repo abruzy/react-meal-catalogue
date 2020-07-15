@@ -19,7 +19,7 @@
 
 ### ✨ Live Demo
 
-[Live Demo Link](https://bookstore-apps.herokuapp.com/)
+[Live Demo Link](https://recipitia-app.herokuapp.com/)
 
 ## Getting Started
 
