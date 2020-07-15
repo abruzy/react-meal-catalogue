@@ -2,15 +2,15 @@ import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 import '../styles/scss/App.scss';
 
-import DogsList from '../containers/DogsList';
-import ShowDog from './ShowDog';
+import FoodsList from '../containers/FoodsList';
+import FootItem from './FootItem';
 
 function App() {
   return (
     <BrowserRouter>
       <div className="panel-bg">
-        <Route exact path="/" component={DogsList} />
-        <Route path="/dog/:id" component={ShowDog} />
+        <Route exact path="/" component={FoodsList} />
+        <Route path="/food/:id" component={FootItem} />
       </div>
     </BrowserRouter>
   );

@@ -1,9 +1,9 @@
 import { combineReducers } from 'redux';
-import dogs from './dogs';
+import foods from './foods';
 import filter from './filter';
 
 const rootReducer = combineReducers({
-  dogs,
+  foods,
   filter,
 });
 
