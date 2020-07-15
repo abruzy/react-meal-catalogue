@@ -2,6 +2,25 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  z-index: 1000;
+  font-family: 'HK-Grotesk', sans-serif;
+}
+
+
+@font-face {
+  font-family: 'HK-Grotesk';
+  src: url('../fonts/HK-Grotesk/HKGrotesk-Black.otf');
+  src: url('../fonts/HK-Grotesk/HKGrotesk-Bold.otf');
+  src: url('../fonts/HK-Grotesk/HKGrotesk-ExtraBold.otf');
+  src: url('../fonts/HK-Grotesk/HKGrotesk-BoldLegacy.otf');
+  src: url('../fonts/HK-Grotesk/HKGrotesk-Light.otf');
+  src: url('../fonts/HK-Grotesk/HKGrotesk-LightLegacy.otf');
+  src: url('../fonts/HK-Grotesk/HKGrotesk-Medium.otf');
+  src: url('../fonts/HK-Grotesk/HKGrotesk-MediumLegacy.otf');
+  src: url('../fonts/HK-Grotesk/HKGrotesk-Regular.otf');
+  src: url('../fonts/HK-Grotesk/HKGrotesk-RegularLegacy.otf');
+  src: url('../fonts/HK-Grotesk/HKGrotesk-SemiBold.otf');
+  src: url('../fonts/HK-Grotesk/HKGrotesk-SemiBoldLegacy.otf');
 }
 
 .panel-bg {

@@ -1,33 +1,9 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  z-index: 1000;
-  font-family: 'HK-Grotesk', sans-serif;
-}
-
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #f5f6fa;
-}
-
-@font-face {
-  font-family: 'HK-Grotesk';
-  src: url('../src/styles/fonts/HK-Grotesk/HKGrotesk-Black.otf');
-  src: url('../src/styles/fonts/HK-Grotesk/HKGrotesk-Bold.otf');
-  src: url('../src/styles/fonts/HK-Grotesk/HKGrotesk-ExtraBold.otf');
-  src: url('../src/styles/fonts/HK-Grotesk/HKGrotesk-BoldLegacy.otf');
-  src: url('../src/styles/fonts/HK-Grotesk/HKGrotesk-Light.otf');
-  src: url('../src/styles/fonts/HK-Grotesk/HKGrotesk-LightLegacy.otf');
-  src: url('../src/styles/fonts/HK-Grotesk/HKGrotesk-Medium.otf');
-  src: url('../src/styles/fonts/HK-Grotesk/HKGrotesk-MediumLegacy.otf');
-  src: url('../src/styles/fonts/HK-Grotesk/HKGrotesk-Regular.otf');
-  src: url('../src/styles/fonts/HK-Grotesk/HKGrotesk-RegularLegacy.otf');
-  src: url('../src/styles/fonts/HK-Grotesk/HKGrotesk-SemiBold.otf');
-  src: url('../src/styles/fonts/HK-Grotesk/HKGrotesk-SemiBoldLegacy.otf');
 }
 
 a {
