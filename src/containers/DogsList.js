@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
@@ -7,23 +7,12 @@ import Dog from '../components/Dog';
 import CategoryFilter from '../components/CategoryFilter';
 import '../styles/scss/BooksList.scss';
 
-// const filteredBooks = (dogs, filter) => {
-//   if (filter === 'All') {
-//     return dogs;
-//   }
-//   return dogs.filter(book => book.category === filter);
-// };
-
 const DogsList = ({
   dogs, FETCHDOGS, FILTERDOGLIST,
 }) => {
-  console.log(dogs);
   useEffect(() => FETCHDOGS(), []);
 
-  const handleFilterChange = value => {
-    console.log(value)
-    value.toLowerCase() === 'all' ? FETCHDOGS() : FILTERDOGLIST(value);
-  };
+  const handleFilterChange = value => (value.toLowerCase() === 'all' ? FETCHDOGS() : FILTERDOGLIST(value));
 
   return dogs.length === 0 ? <p>Is Loading</p> : (
     <div className="book-list">
@@ -44,19 +33,14 @@ const DogsList = ({
   );
 };
 
-// DogsList.propTypes = {
-//   dogs: PropTypes.arrayOf(PropTypes.object).isRequired,
-//   FETCHDOGS: PropTypes.func.isRequired,
-//   FILTERDOGLIST: PropTypes.func.isRequired,
-// };
+DogsList.propTypes = {
+  dogs: PropTypes.arrayOf(PropTypes.object).isRequired,
+  FETCHDOGS: PropTypes.func.isRequired,
+  FILTERDOGLIST: PropTypes.func.isRequired,
+};
 
 const mapStateToProps = state => ({
   dogs: state.dogs.dog_clothes,
 });
-
-// const mapDispatchToProps = dispatch => ({
-//   removeBook: id => dispatch(REMOVE_BOOK(id)),
-//   changeFilter: value => dispatch(CHANGE_FILTER(value)),
-// });
 
 export default connect(mapStateToProps, { FETCHDOGS, FILTERDOGLIST }, null)(DogsList);

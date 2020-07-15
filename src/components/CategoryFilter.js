@@ -5,6 +5,7 @@ import '../styles/scss/CategoryFilter.scss';
 const categories = ['All', 'Beef', 'Chicken', 'Dessert', 'Lamb', 'Miscellaneous', 'Pasta', 'Pork', 'Seafood', 'Side', 'Starter', 'Vegan', 'Vegetarian', 'Breakfast', 'Goat'];
 
 const CategoryFilter = ({ handleChange }) => {
+  // eslint-disable-next-line no-unused-vars
   const [dropDownValue, setDropDownValue] = useState('All');
 
   return (
@@ -18,7 +19,6 @@ const CategoryFilter = ({ handleChange }) => {
         className="category-button"
         name="cat"
         onChange={e => {
-          console.log(e.target.value);
           setDropDownValue(e.target.value);
           handleChange(e.target.value);
         }}

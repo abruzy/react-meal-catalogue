@@ -1,18 +1,19 @@
-import React, {useEffect, useState} from 'react'
+/* eslint-disable react/prop-types */
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import '../styles/scss/BooksForm.scss';
-import {FETCHDOG, CLEAR_DATA} from '../actions/index'
 import { connect } from 'react-redux';
+import { FETCHDOG, CLEAR_DATA } from '../actions/index';
 
-function ShowDog({ location, match, FETCHDOG, CLEAR_DATA, dog }) {
-
+function ShowDog({
+  location, FETCHDOG, CLEAR_DATA, dog,
+}) {
   useEffect(() => {
-    FETCHDOG(location.state.idMeal)
-    return CLEAR_DATA()
-  
-  }, [])
-  console.log(location, match);
-  return  Object.entries(dog).length === 0 ? <p>Loading</p> : (
+    FETCHDOG(location.state.idMeal);
+    return CLEAR_DATA();
+  }, []);
+
+  return Object.entries(dog).length === 0 ? <p>Loading</p> : (
     <div className="dog">
       <div className="show-item">
         <img src={dog.strMealThumb} alt="" />
@@ -40,13 +41,15 @@ function ShowDog({ location, match, FETCHDOG, CLEAR_DATA, dog }) {
 }
 
 ShowDog.propTypes = {
-
+  // eslint-disable-next-line react/forbid-prop-types
+  dog: PropTypes.object.isRequired,
+  location: PropTypes.shape({ pathname: PropTypes.string.isRequired }).isRequired,
+  FETCHDOG: PropTypes.func.isRequired,
+  CLEAR_DATA: PropTypes.func.isRequired,
 };
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = state => ({
   dog: state.dogs.singleDog,
-})
-
-
+});
 
 export default connect(mapStateToProps, { FETCHDOG, CLEAR_DATA })(ShowDog);
