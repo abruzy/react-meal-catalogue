@@ -1,4 +1,4 @@
-<h1 align="center">Welcome to Bookstore App 👋</h1>
+<h1 align="center">Welcome to Catalogue of Recipe App 👋</h1>
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-0.1.0-blue.svg?cacheSeconds=2592000" />
   <a href="https://twitter.com/abruzy01" target="_blank">
@@ -6,9 +6,11 @@
   </a>
 </p>
 
-> A Simple Bookstore App built using React and using redux for state managemnt. This app can perform simple CRUD functionalities like Add book, Delete a book and Filter base on the category
+> A Simple Bookstore App built using React and using redux for state managemnt. This app provides you the recipes for the best dishes. Browse per category of dishes and find the recipe for you favourite dish. You can also find dishes based on the type of recipes you want.
 
-![BookStore CMS](./bookstore.png)
+> NB: In this project, I was ask to build a catalogue of dog clothes but I search the web and couldn't find one, so I decided to use MEALDB API isntead for this app
+
+![Dog Catalogue](./recipitia.png)
 
 ## Built With
 

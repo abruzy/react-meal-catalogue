@@ -11,7 +11,7 @@ function ShowDog({
   useEffect(() => {
     FETCHDOG(location.state.idMeal);
     return CLEAR_DATA();
-  }, []);
+  }, [FETCHDOG, CLEAR_DATA]);
 
   return Object.entries(dog).length === 0 ? <p>Loading</p> : (
     <div className="dog">
