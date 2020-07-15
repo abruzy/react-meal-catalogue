@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { FETCHDOGS, FILTERDOGLIST } from '../actions';
 import Dog from '../components/Dog';
 import CategoryFilter from '../components/CategoryFilter';
-import '../styles/scss/BooksList.scss';
+import '../styles/scss/DogsList.scss';
 
 const DogsList = ({
   dogs, FETCHDOGS, FILTERDOGLIST,

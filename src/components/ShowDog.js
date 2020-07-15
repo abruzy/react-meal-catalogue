@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
-import '../styles/scss/BooksForm.scss';
+import '../styles/scss/ShowDog.scss';
 import { connect } from 'react-redux';
 import { FETCHDOG, CLEAR_DATA } from '../actions/index';
 

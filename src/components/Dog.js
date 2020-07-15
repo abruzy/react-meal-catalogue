@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import '../styles/scss/Book.scss';
+import '../styles/scss/Dog.scss';
 
 const Dog = ({ dog }) => (
   <div className="book-page">
