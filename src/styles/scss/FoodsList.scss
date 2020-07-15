@@ -24,7 +24,7 @@
 .books-container {
   margin: 80px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   grid-gap: 30px;
   align-items: center;
 }
@@ -41,8 +41,8 @@
   }
 
   .books-container {
-    grid-template-columns: repeat(1, 1fr);
-    margin: 30px;
+    margin: 20px 10px 20px;
+    grid-gap: 0;
   }
 }
 
@@ -54,12 +54,16 @@
   }
 
   .books-container {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
 }
 
 @media only screen and (max-width: 1024px) {
   .header {
     padding: 0 3%;
+  }
+
+  .books-container {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
 }
