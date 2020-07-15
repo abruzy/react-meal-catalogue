@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
@@ -18,10 +18,11 @@ const DogsList = ({
   dogs, FETCHDOGS, FILTERDOGLIST,
 }) => {
   console.log(dogs);
-  React.useEffect(() => FETCHDOGS(), []);
-  const handleFilterChange = event => {
-    const { value } = event.target;
-    FILTERDOGLIST(value);
+  useEffect(() => FETCHDOGS(), []);
+
+  const handleFilterChange = value => {
+    console.log(value)
+    value.toLowerCase() === 'all' ? FETCHDOGS() : FILTERDOGLIST(value);
   };
 
   return dogs.length === 0 ? <p>Is Loading</p> : (
@@ -43,11 +44,11 @@ const DogsList = ({
   );
 };
 
-DogsList.propTypes = {
-  dogs: PropTypes.arrayOf(PropTypes.object).isRequired,
-  FETCHDOGS: PropTypes.func.isRequired,
-  FILTERDOGLIST: PropTypes.func.isRequired,
-};
+// DogsList.propTypes = {
+//   dogs: PropTypes.arrayOf(PropTypes.object).isRequired,
+//   FETCHDOGS: PropTypes.func.isRequired,
+//   FILTERDOGLIST: PropTypes.func.isRequired,
+// };
 
 const mapStateToProps = state => ({
   dogs: state.dogs.dog_clothes,

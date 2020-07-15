@@ -1,4 +1,4 @@
-const INITIAL_STATE = { dog_clothes: [] };
+const INITIAL_STATE = { dog_clothes: [], singleDog: {} };
 
 const dogs = (state = INITIAL_STATE, action) => {
   switch (action.type) {
@@ -6,7 +6,7 @@ const dogs = (state = INITIAL_STATE, action) => {
       console.log(action.payload);
       return { ...state, dog_clothes: action.payload };
     case 'FETCH_DOG':
-      return { ...state, dog_clothes: action.payload.data.meals };
+      return { ...state, singleDog: action.payload };
     case 'FETCH_BY_CATEGORY':
       console.log(action.payload);
       return { ...state, dog_clothes: action.payload.data.meals };
