@@ -5,7 +5,7 @@ import '../styles/scss/FoodItem.scss';
 import { connect } from 'react-redux';
 import { FETCH_RECIPE, CLEAR_DATA } from '../actions/index';
 
-function ShowDog({
+function FoodItem({
   location, FETCH_RECIPE, CLEAR_DATA, food,
 }) {
   useEffect(() => {
@@ -14,7 +14,7 @@ function ShowDog({
   }, [FETCH_RECIPE, CLEAR_DATA]);
 
   return Object.entries(food).length === 0 ? <p>Loading</p> : (
-    <div className="dog">
+    <div className="food-item">
       <div className="show-item">
         <img src={food.strMealThumb} alt="" />
         <p>{food.strMeal}</p>
@@ -40,7 +40,7 @@ function ShowDog({
   );
 }
 
-ShowDog.propTypes = {
+FoodItem.propTypes = {
   // eslint-disable-next-line react/forbid-prop-types
   food: PropTypes.object.isRequired,
   location: PropTypes.shape({ pathname: PropTypes.string.isRequired }).isRequired,
@@ -52,4 +52,4 @@ const mapStateToProps = state => ({
   food: state.foods.food_item,
 });
 
-export default connect(mapStateToProps, { FETCH_RECIPE, CLEAR_DATA })(ShowDog);
+export default connect(mapStateToProps, { FETCH_RECIPE, CLEAR_DATA })(FoodItem);
