@@ -14,7 +14,7 @@ const FoodsList = ({
 
   const handleFilterChange = value => (value.toLowerCase() === 'all' ? FETCH_RECIPIES() : FILTER_FOODLIST(value));
 
-  return foods.length === 0 ? <p>Is Loading</p> : (
+  return foods.length === 0 ? <div className="loader">Loading...</div> : (
     <div className="book-list">
       <div className="header">
         <div className="header-title">Meal Recipe Catalogue</div>
