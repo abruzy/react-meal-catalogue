@@ -10,7 +10,7 @@
 
 > NB: In this project, I was ask to build a catalogue of dog clothes but I search the web and couldn't find one, so I decided to use MEALDB API isntead for this app
 
-![Dog Catalogue](./recipitia.png)
+![Dog Catalogue](./meal-recipe.png)
 
 ## Built With
 
@@ -36,11 +36,11 @@ To get a local copy up and running follow these simple steps.
 1. clone the repo
 
 ```sh
-git clone https://github.com/abruzy/react-bookstore
+git clone git@github.com:abruzy/react-meal-catalogue.git
 ```
 2. change directory 
 ```sh
-cd react-bookstore
+cd react-meal-catalogue
 ```
 
 3. install dependencies
@@ -55,6 +55,11 @@ yarn install
 yarn start
 ```
 
+## To run test
+```sh
+yarn test
+```
+
 ## Author
 
 👤 **Abubakar Diallo**
@@ -67,7 +72,7 @@ yarn start
 
 Contributions, issues and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/abruzy/react-bookstore/issues).
+Feel free to check the [issues page](https://github.com/abruzy/react-meal-catalogue/issues).
 
 ## Show your support
 
