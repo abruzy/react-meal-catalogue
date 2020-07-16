@@ -1,4 +1,4 @@
-<h1 align="center">Welcome to Catalogue of Recipe App 👋</h1>
+<h1 align="center">Welcome to Catalogue of Meal Recipe App 👋</h1>
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-0.1.0-blue.svg?cacheSeconds=2592000" />
   <a href="https://twitter.com/abruzy01" target="_blank">
