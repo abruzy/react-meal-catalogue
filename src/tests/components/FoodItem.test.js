@@ -1,7 +1,13 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
+import Provider from 'react-redux';
+import configureStore from 'redux-mock-store';
 
 import FoodItem from '../../components/FootItem';
+
+const mockStore = configureStore([]);
+
+const store = mockStore({});
 
 describe('FoodItem Component', () => {
   const food = {
@@ -21,11 +27,12 @@ describe('FoodItem Component', () => {
 
   it('should render', () => {
     const wrapper = mount(<Provider store={store}><FoodItem food={food} /></Provider>);
+    console.log(wrapper.debug());
 
-    const component = shallow(
-      <FoodItem food={food} />,
-    );
-    const element = component.find('.food-item');
+    // const component = shallow(
+    //   <FoodItem food={food} />,
+    // );
+    const element = wrapper.find('.food-item');
     expect(element.length).toBe(1);
 
     // const img = component.find('.meal-img');
