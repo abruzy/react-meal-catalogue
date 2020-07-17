@@ -4,19 +4,16 @@ import PropTypes from 'prop-types';
 import '../styles/scss/Food.scss';
 
 const Food = ({ food }) => (
-  <div className="book-page">
+  <div className="food-page">
     <div className="cards">
-      <img src={food.strMealThumb} alt="meals" />
-      <p>{food.strMeal}</p>
+      <img className="meal-img" src={food.strMealThumb} alt="meals" />
+      <p className="meal-name">{food.strMeal}</p>
     </div>
   </div>
 );
 
 Food.propTypes = {
-  food: PropTypes.shape({
-    strMealThumb: PropTypes.string.isRequired,
-    strMeal: PropTypes.string.isRequired,
-  }).isRequired,
+  food: PropTypes.instanceOf(Object).isRequired,
 };
 
 export default Food;

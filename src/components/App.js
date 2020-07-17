@@ -8,7 +8,7 @@ import FootItem from './FootItem';
 function App() {
   return (
     <BrowserRouter>
-      <div className="panel-bg">
+      <div className="app panel-bg">
         <Route exact path="/" component={FoodsList} />
         <Route path="/food/:id" component={FootItem} />
       </div>

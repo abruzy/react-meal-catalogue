@@ -8,11 +8,13 @@ import CategoryFilter from '../components/CategoryFilter';
 import '../styles/scss/FoodsList.scss';
 
 const FoodsList = ({
-  foods, FETCH_RECIPIES, FILTER_FOODLIST,
+  foods, fetchRecipies, filterFoodList,
 }) => {
-  useEffect(() => FETCH_RECIPIES(), []);
+  useEffect(() => {
+    fetchRecipies();
+  }, [fetchRecipies]);
 
-  const handleFilterChange = value => (value.toLowerCase() === 'all' ? FETCH_RECIPIES() : FILTER_FOODLIST(value));
+  const handleFilterChange = value => (value.toLowerCase() === 'all' ? fetchRecipies() : filterFoodList(value));
 
   return foods.length === 0 ? <div className="loader">Loading...</div> : (
     <div className="book-list">
@@ -35,12 +37,17 @@ const FoodsList = ({
 
 FoodsList.propTypes = {
   foods: PropTypes.arrayOf(PropTypes.object).isRequired,
-  FETCH_RECIPIES: PropTypes.func.isRequired,
-  FILTER_FOODLIST: PropTypes.func.isRequired,
+  fetchRecipies: PropTypes.func.isRequired,
+  filterFoodList: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = state => ({
   foods: state.foods.foods_recipies,
 });
 
-export default connect(mapStateToProps, { FETCH_RECIPIES, FILTER_FOODLIST }, null)(FoodsList);
+const mapDispatchToProps = dispatch => ({
+  fetchRecipies: () => dispatch(FETCH_RECIPIES()),
+  filterFoodList: category => dispatch(FILTER_FOODLIST(category)),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(FoodsList);

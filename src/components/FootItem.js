@@ -6,12 +6,12 @@ import { connect } from 'react-redux';
 import { FETCH_RECIPE, CLEAR_DATA } from '../actions/index';
 
 function FoodItem({
-  location, FETCH_RECIPE, CLEAR_DATA, food,
+  location, fetchRecipe, clearData, food,
 }) {
   useEffect(() => {
-    FETCH_RECIPE(location.state.idMeal);
-    return CLEAR_DATA();
-  }, [FETCH_RECIPE, CLEAR_DATA]);
+    fetchRecipe(location.state.idMeal);
+    return clearData();
+  }, [fetchRecipe, clearData]);
 
   return Object.entries(food).length === 0 ? <p>Loading</p> : (
     <div className="food-item">
@@ -41,15 +41,19 @@ function FoodItem({
 }
 
 FoodItem.propTypes = {
-  // eslint-disable-next-line react/forbid-prop-types
-  food: PropTypes.object.isRequired,
-  location: PropTypes.shape({ pathname: PropTypes.string.isRequired }).isRequired,
-  FETCH_RECIPE: PropTypes.func.isRequired,
-  CLEAR_DATA: PropTypes.func.isRequired,
+  food: PropTypes.instanceOf(Object).isRequired,
+  location: PropTypes.instanceOf(Object).isRequired,
+  fetchRecipe: PropTypes.func.isRequired,
+  clearData: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = state => ({
   food: state.foods.food_item,
 });
 
-export default connect(mapStateToProps, { FETCH_RECIPE, CLEAR_DATA })(FoodItem);
+const mapDispatchToProps = dispatch => ({
+  fetchRecipe: foodId => dispatch(FETCH_RECIPE(foodId)),
+  clearData: () => dispatch(CLEAR_DATA()),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(FoodItem);
