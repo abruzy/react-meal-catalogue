@@ -21,6 +21,7 @@ const FETCH_RECIPIES = () => dispatch => {
 
 const FETCH_RECIPE = foodId => async dispatch => {
   const data = await axios.get(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${foodId}`);
+  console.log(data);
   dispatch({
     type: 'FETCH RECIPE',
     payload: data.data.meals[0],

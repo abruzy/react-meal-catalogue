@@ -23,11 +23,11 @@ html::-webkit-scrollbar {
 
 body::-webkit-scrollbar-thumb,
 html::-webkit-scrollbar-thumb {
-  background: blue;
+  background: grey;
   border-radius: 1rem;
 }
 
 body::-webkit-scrollbar-track,
 html::-webkit-scrollbar-track {
-  background: red;
+  background: #0290FF;
 }
