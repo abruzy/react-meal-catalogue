@@ -14,7 +14,6 @@ describe('App component', () => {
 
   it('Should render', () => {
     const element = component.find('.app');
-    console.log(element.debug());
     expect(element.length).toEqual(1);
   });
 });
