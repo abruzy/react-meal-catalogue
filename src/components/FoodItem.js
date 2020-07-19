@@ -13,11 +13,11 @@ function FoodItem({
     return clearData();
   }, [fetchRecipe, clearData]);
 
-  return Object.entries(food).length === 0 ? <p>Loading</p> : (
+  return Object.entries(food).length === 0 ? <div className="loader">Loading...</div> : (
     <div className="food-item">
       <div className="show-item">
-        <img src={food.strMealThumb} alt="" />
-        <p>{food.strMeal}</p>
+        <img className="meal-img" src={food.strMealThumb} alt="" />
+        <p className="meal-name">{food.strMeal}</p>
       </div>
       <div className="info">
         <h2 className="title">
@@ -47,11 +47,11 @@ FoodItem.propTypes = {
   clearData: PropTypes.func.isRequired,
 };
 
-const mapStateToProps = state => ({
+export const mapStateToProps = state => ({
   food: state.foods.food_item,
 });
 
-const mapDispatchToProps = dispatch => ({
+export const mapDispatchToProps = dispatch => ({
   fetchRecipe: foodId => dispatch(FETCH_RECIPE(foodId)),
   clearData: () => dispatch(CLEAR_DATA()),
 });

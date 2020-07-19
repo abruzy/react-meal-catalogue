@@ -3,7 +3,7 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import '../styles/scss/App.scss';
 
 import FoodsList from '../containers/FoodsList';
-import FootItem from './FootItem';
+import FootItem from './FoodItem';
 
 function App() {
   return (
