@@ -11,6 +11,7 @@ function FoodItem({
   useEffect(() => {
     fetchRecipe(location.state.idMeal);
     return clearData();
+    // eslint-disable-next-line
   }, [fetchRecipe, clearData]);
 
   return Object.entries(food).length === 0 ? <div className="loader">Loading...</div> : (
