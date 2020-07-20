@@ -42,7 +42,7 @@
   transform: translateZ(0);
 }
 
-.loader:before {
+.loader::before {
   width: 50%;
   height: 50%;
   background: #fff;
@@ -53,7 +53,7 @@
   content: '';
 }
 
-.loader:after {
+.loader::after {
   background: #0dc5c1;
   width: 75%;
   height: 75%;
