@@ -14,7 +14,7 @@ function FoodItem({
     // eslint-disable-next-line
   }, [fetchRecipe, clearData]);
 
-  return Object.entries(food).length === 0 ? <div className="loader">Loading...</div> : (
+  return Object.entries(food).length === 0 ? <div>Loading...</div> : (
     <div className="food-item">
       <div className="show-item">
         <img className="meal-img" src={food.strMealThumb} alt="" />
