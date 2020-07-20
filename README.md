@@ -6,11 +6,11 @@
   </a>
 </p>
 
-> A Simple Bookstore App built using React and using redux for state managemnt. This app provides you the recipes for the best dishes. Browse per category of dishes and find the recipe for you favourite dish. You can also find dishes based on the type of recipes you want.
+> A Simple Meal Catalogue App built using React and using redux for state managemnt. This app provides you the recipes for the best dishes. Browse per category of dishes and find the recipe for you favourite dish. You can also find dishes based on the type of recipes you want.
 
 > NB: In this project, I was ask to build a catalogue of dog clothes but I search the web and couldn't find one, so I decided to use MEALDB API isntead for this app
 
-![Dog Catalogue](./meal-recipe.png)
+![Meals Catalogue](./meal-recipe.png)
 
 ## Built With
 
