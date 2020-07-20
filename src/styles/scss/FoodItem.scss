@@ -5,7 +5,7 @@
   width: 11em;
   height: 11em;
   border-radius: 50%;
-  background-color: #fff;
+  background: #fff;
   background: -moz-linear-gradient(left, #fff 10%, rgba(255, 255, 255, 0) 42%);
   background: -webkit-linear-gradient(left, #fff 10%, rgba(255, 255, 255, 0) 42%);
   background: -o-linear-gradient(left, #fff 10%, rgba(255, 255, 255, 0) 42%);
@@ -22,7 +22,7 @@
 .loader::before {
   width: 50%;
   height: 50%;
-  background-color: #fff;
+  background: #fff;
   border-radius: 100% 0 0 0;
   position: absolute;
   top: 0;
@@ -31,7 +31,7 @@
 }
 
 .loader::after {
-  background-color: #0dc5c1;
+  background: #0dc5c1;
   width: 75%;
   height: 75%;
   border-radius: 50%;
