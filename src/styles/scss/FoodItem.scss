@@ -1,0 +1,52 @@
+.food-item {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 80px;
+
+  .show-item {
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 6px 0 rgba(0, 0, 0, 0.3);
+    border-radius: 3px;
+    text-align: center;
+    background-color: #ccc;
+    height: 600px;
+    width: 600px;
+
+    img {
+      width: 100%;
+    }
+
+    p {
+      padding: 20px;
+    }
+  }
+
+  .info {
+    margin-left: 40px;
+    margin-top: 5rem;
+
+    .title {
+      font-weight: bold;
+      font-size: 2rem;
+    }
+
+    .ingredients {
+      margin: 20px;
+
+      .item {
+        font-size: 1.3rem;
+      }
+    }
+
+    .instructions {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    .instruction {
+      font-size: 1.2rem;
+      font-weight: normal;
+      line-height: 1.5;
+    }
+  }
+}
