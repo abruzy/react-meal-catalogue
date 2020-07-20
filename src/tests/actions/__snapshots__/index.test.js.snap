@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`async actions dispatches the correct action and payload 1`] = `Array []`;
+
+exports[`async actions dispatches the correct action and payload 2`] = `
+Array [
+  Object {
+    "type": "RESET_DATA",
+  },
+]
+`;
+
+exports[`async actions dispatches the correct action and payload 3`] = `
+Array [
+  Object {
+    "type": "RESET_DATA",
+  },
+]
+`;
