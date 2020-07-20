@@ -13,13 +13,6 @@ describe('async actions', () => {
   });
 
   it('dispatches the correct action and payload', () => {
-    // const expectedActions = [
-    //   {
-    //     type: 'FETCH_RECIPE',
-    //     payload: 1,
-    //   },
-    // ];
-
     store.dispatch(FETCH_RECIPE());
     expect(store.getActions()).toMatchSnapshot();
   });
