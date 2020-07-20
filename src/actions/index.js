@@ -9,7 +9,7 @@ const FETCH_RECIPIES = () => dispatch => {
   allCategories.map(category => {
     axios.get(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${category}`)
       .then(res => {
-        allCategoriesResult.push(...res.data.meals);;
+        allCategoriesResult.push(...res.data.meals);
       }).then(() => {
         dispatch({
           type: 'FETCH RECIPIES',
