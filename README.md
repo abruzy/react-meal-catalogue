@@ -10,7 +10,7 @@
 
 > NB: In this project, I was ask to build a catalogue of dog clothes but I search the web and couldn't find one, so I decided to use MEALDB API isntead for this app
 
-![Meals Catalogue](./meal-recipe.png)
+![Meals Catalogue](./meal-catalogue.png)
 
 ## Built With
 
